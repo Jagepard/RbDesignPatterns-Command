@@ -3,10 +3,10 @@ author  : Jagepard <jagepard@yandex.ru>
 license https://mit-license.org/ MIT
 =end
 
-require './Command'
+require "./Command"
 
 class TurnOffCommand < Command
-    def execute()
+    def execute
         puts("The Light turns off\n")
     end
 end
