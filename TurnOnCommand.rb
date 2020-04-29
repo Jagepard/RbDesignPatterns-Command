@@ -6,7 +6,7 @@ license https://mit-license.org/ MIT
 require "./Command"
 
 class TurnOnCommand < Command
-    def execute
-        puts("The Light turns on\n")
-    end
+  def execute
+    puts("The Light turns on\n")
+  end
 end

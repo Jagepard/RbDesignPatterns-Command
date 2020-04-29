@@ -4,6 +4,6 @@ license https://mit-license.org/ MIT
 =end
 
 class Command
-    def execute
-    end
+  def execute
+  end
 end

@@ -4,23 +4,23 @@ license https://mit-license.org/ MIT
 =end
 
 class Device
-    def initialize
-        @commands = {}
+  def initialize
+    @commands = {}
+  end
+
+  def execute(command_name)
+    unless @commands.has_key?(command_name)
+      raise "Command does not exist in the registry"
     end
 
-    def execute(command_name)
-        unless @commands.has_key?(command_name)
-            raise "Command does not exist in the registry"
-        end
+    @commands[command_name].execute
+  end
 
-        @commands[command_name].execute
+  def set_command(command_name, command)
+    if @commands.has_key?(command_name)
+      raise "Command already exists"
     end
 
-    def set_command(command_name, command)
-        if @commands.has_key?(command_name)
-            raise "Command already exists"
-        end
-
-        @commands[command_name] = command
-    end
+    @commands[command_name] = command
+  end
 end
